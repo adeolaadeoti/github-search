@@ -38,7 +38,6 @@ $white: #FFFFFF;
         }
         @media only screen and (max-width: 31.25em) { 
             margin-top: 0;
-            width: 6rem;
         }
     }
 
@@ -92,8 +91,8 @@ $white: #FFFFFF;
                         height: 2rem;
                     }
                     @media only screen and (max-width: 31.25em) { 
-                        width: 1rem;
-                        height: 1rem;
+                        width: 1.7rem;
+                        height: 1.7rem;
                     }
                 }
             }
@@ -191,6 +190,9 @@ $white: #FFFFFF;
         &__bio {
             max-width: 25rem;
             margin-right: -6rem;
+            @media only screen and (max-width: 31.25em) { 
+                text-align: center;
+            }
             svg {
                 margin-bottom: -1.5rem;
             }
