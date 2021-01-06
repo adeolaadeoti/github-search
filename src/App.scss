@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'GTWalsheim-Light';
+    src: url('./assets/font/GTWalsheim-Light.woff') format('woff'),
+         url('./assets/font/GTWalsheim-Light.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GTWalsheim-Medium';
+    src: url('./assets/font/GTWalsheim-Medium.woff') format('woff'),
+         url('./assets/font/GTWalsheim-Medium.woff2') format('woff2');
+    font-display: swap;
+}
+
+
+/*--------------------------
+    variables
+---------------------------*/
+//fonts
+$primary-font: 'GTWalsheim-Light', sans-serif;
+$secondary-font: 'GTWalsheim-Medium', sans-serif;
+
+//colors
+$primary-color: #C1E1FA;
+$secondary-color: #F1D3FD;
+$black: #000000;
+$gray: #ACACAC;
+$white: #FFFFFF;
+
+/*--------------------------
+    base settings
+---------------------------*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    // border: solid 2px red;
+}
+
+html {
+    font-size: 62.5%; // 10px
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    
+    @media only screen and (max-width: 62.5em) { // tab-land
+        font-size: 56.25%;
+    }
+    
+    @media only screen and (max-width: 56.25em) { // tab-port
+        font-size: 54%; 
+    }
+
+    @media only screen and (max-width: 37.5em) { // phone
+        font-size: 51%; 
+    }
+    
+    @media only screen and (min-width: 112.5em) { // big desktop
+        font-size: 75%; // 1rem = 12px, 12/16 = 75
+    }
+    
+}
+
+body {
+    font-family: $primary-font;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    letter-spacing: -.01em;
+    line-height: 30px;
+}
+
+
+.layout {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    min-height: 100vh;
+
+    @media only screen and (max-width: 54.125em) { 
+        grid-template-columns: 10rem 1fr;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.mobile-wrapper {
+    @media only screen and (max-width: 54.125em) { 
+        // display: flex;
+    }
+}
