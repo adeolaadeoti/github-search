@@ -25,10 +25,20 @@ $white: #FFFFFF;
     flex-direction: column;
     align-items: center;
 
+    @media only screen and (max-width: 31.25em) { 
+        flex-direction: row;
+        padding: 2rem 3rem;
+        justify-content: space-between;
+    }
+
     img {
         margin-top: 1.5rem;
         @media only screen and (max-width: 54.125em) { 
             width: 7rem;
+        }
+        @media only screen and (max-width: 31.25em) { 
+            margin-top: 0;
+            width: 6rem;
         }
     }
 
@@ -38,10 +48,19 @@ $white: #FFFFFF;
         align-items: center;
         justify-content: center;
         margin-top: calc(100vh/4);
+        @media only screen and (max-width: 31.25em) { 
+            flex-direction: row;
+            margin-top: 0;
+        }
+
         li {
             list-style: none;
             &:not(:last-child) {
                 margin-bottom: 5rem;
+                @media only screen and (max-width: 31.25em) { 
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                }
             }
             a {
                 background-image: linear-gradient(90deg, $primary-color, $secondary-color);
@@ -51,6 +70,11 @@ $white: #FFFFFF;
                 justify-content: center;
                 border-radius: 10px;
                 border: 1px solid transparent;
+
+                @media only screen and (max-width: 31.25em) { 
+                    padding: 1rem;
+                }
+
 
                 &:hover {
                     background-image: none;
@@ -66,6 +90,10 @@ $white: #FFFFFF;
                     @media only screen and (max-width: 54.125em) { 
                         width: 2rem;
                         height: 2rem;
+                    }
+                    @media only screen and (max-width: 31.25em) { 
+                        width: 1rem;
+                        height: 1rem;
                     }
                 }
             }
@@ -89,6 +117,9 @@ $white: #FFFFFF;
         display: flex;
         align-items: center;
         margin-bottom: 8rem;
+        @media only screen and (max-width: 31.25em) { 
+            justify-content: center;
+        }
 
         input {
             background-color: transparent;
@@ -206,6 +237,8 @@ $white: #FFFFFF;
                 padding: 2rem;
                 background-color: $black;
                 border-radius: 30px;
+                text-decoration: none;
+                color: white;
                 &:not(:last-child) {
                     margin-right: 3rem;
                 }

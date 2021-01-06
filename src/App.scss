@@ -81,9 +81,14 @@ body {
     display: grid;
     grid-template-columns: 15rem 1fr;
     min-height: 100vh;
+    overflow-x: hidden;
 
     @media only screen and (max-width: 54.125em) { 
         grid-template-columns: 10rem 1fr;
+    }
+    @media only screen and (max-width: 31.25em) { 
+        display: flex;
+        flex-direction: column;
     }
 }
 

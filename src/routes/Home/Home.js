@@ -98,9 +98,8 @@ const Home = () => {
         <div className={style.repoWrapper}>
           <h1>Popular repositories</h1>
           <div className={style.repoContent}>
-
           {repoData?.slice(0,6).map(repo => (
-              <div key={repo.id} className={style.repo}>
+              <a href={repo.clone_url} target="_blank" rel="noopener noreferrer" key={repo.id} className={style.repo}>
                 <ul className={style.repo__info}>
                     <li>{repo.language}</li>
                     <li>
@@ -114,7 +113,7 @@ const Home = () => {
                 </ul>
                 <h5 className={style.repo__title}>{repo.full_name.split('/')[1]}</h5>
                 <p className={style.repo__details}>{repo.description}</p>
-              </div>
+              </a>
           ))}            
           </div>
         </div>
